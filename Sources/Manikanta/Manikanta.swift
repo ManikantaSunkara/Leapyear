@@ -1,24 +1,34 @@
 struct Manikanta {
     
-    let oneUnitCost = 100.0
-    func print() -> Int;"(\"Enter quantity:\")"{
-    if; let quantity = readLine() //user input as String
-    {
-        if let x = Int(Quantity)
-        {
-            let totalCost = oneUnitCost * Double(x)    // Calculating total cost
-            if totalCost > 1000{                       //if total cost > 1000
-                let discountedCost = totalCost * 0.90  //discount 10 %
-                print("cost for user: \(discountedCost)") //Display cost for user
+    
+    //LeapYear __FUNCTION__
+    func LeapYear(year: Int) -> Void {
+        if year % 4 != 0 { //Divide the input by 4. If there is a remainder it is not a leap year.
+            Swift.print("\(year) is not a leap year")
+        } else {
+        /* Divide the input by 100. If there is no remainder it is a leap year
+           Divide the input by 400. There is a remainder the year is not a leap year.
+           If there is no remainder it is a leap year */
+           
+            if year % 100 == 0 && year % 400 != 0 {
+                Swift.print("\(year) is not a leap year")
+            } else {
+                Swift.print("\(year) is a leap year")
             }
-            else{
-                print("cost for user: \(totalCost)") //Display cost for user if total cost <= 1000
-            }
-        }
-        else{
-            print("\(Quantity) of not a valid Integer") //if user input is not a valid Integer
         }
     }
-}
-}
 
+    //Taking user input
+    func print(_Enter year: Bool){
+    if let input = readLine() //user input as String
+    {
+        if let int = Int(input) //converting user input to type Integer
+        {
+            LeapYear(year: int) //Calling the LeapYear __FUNCTION__
+        }
+        else{
+            Swift.print("\(input) of not a valid Integer") //if user input is not a valid Integer
+        }
+    }
+    }
+}
